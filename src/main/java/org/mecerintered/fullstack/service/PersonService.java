@@ -48,4 +48,12 @@ public class PersonService {
         return allPeople;
     }
 
+    public PersonResponseDTO getPersonByName(String name){
+
+        Person person = repository.findByName(name);
+
+        PersonResponseDTO response = new PersonResponseDTO(person.getId(), person.getName(), person.getEmail());
+
+        return response;
+    }
 }

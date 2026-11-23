@@ -27,4 +27,9 @@ public class PersonController {
     public List<PersonResponseDTO> getAllPeople(){
         return service.getAllPeople();
     }
+
+    @GetMapping("/{name}")
+    public PersonResponseDTO getPersonByName(@PathVariable String name){
+        return service.getPersonByName(name);
+    }
 }
