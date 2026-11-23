@@ -5,7 +5,6 @@ import org.mecerintered.fullstack.entity.Person;
 public record PersonRequestDTO(
 
         String name,
-
         String email
 ) {
 
@@ -13,7 +12,7 @@ public record PersonRequestDTO(
 
         Person person = new Person();
         person.setName(name);
-        person.getEmail(email);
+        person.setEmail(email);
 
         return person;
     }
